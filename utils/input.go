@@ -11,7 +11,7 @@ import (
 func ReadInput(challenge string) []string {
 	var file *os.File
 	if _, err := os.Stat("input.txt"); os.IsNotExist(err) {
-		file, err = os.Open(fmt.Sprintf("%s/input.txt", challenge))
+		file, err = os.Open(fmt.Sprintf("challenges/%s/input.txt", challenge))
 		if err != nil {
 			log.Fatal(err)
 		}
